@@ -17,13 +17,13 @@ const App = () => {
       .catch((err) => setError(err.message));
   };
 
-  useEffect(() => getInfo(), []);
+  useEffect(() => getInfo(), [orders]);
 
     return (
       <main className="App">
         <header>
           <h1>Burrito Builder</h1>
-          <OrderForm />
+          <OrderForm getInfo={getInfo} />
         </header>
 
         <Orders orders={orders}/>

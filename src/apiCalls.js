@@ -11,11 +11,11 @@ const getData = (path) => {
 };
 
 const updateData = (path, action, data) => {  
+
   return fetch(path, {
     method: action,
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      "Content-Type": "application/json"
     },
     body: JSON.stringify(data),
   }).then((response) => {
@@ -35,7 +35,7 @@ export const apiCalls = {
     return getData(`http://localhost:3001/api/v1/orders`);
   },
 
-  postJobPosting: (data) => {
+  postOrder: (data) => {
     return updateData(`http://localhost:3001/api/v1/orders`, "POST", data);
   }
 }
