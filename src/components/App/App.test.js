@@ -33,9 +33,12 @@ describe("App", () => {
 
   })
 
-  it("should be able to submit an order", async() => {
-    apiCalls.postOrder.mockResolvedValue(mockData[2].orderToPost);
-    apiCalls.getOrders.mockResolvedValue(mockData[3]);
+  it("should be able to submit an order and display it", async() => {
+    const orderToPost = mockData[2];
+    const newOrders = mockData[3];
+
+    apiCalls.postOrder.mockResolvedValue(orderToPost.orderToPost);
+    apiCalls.getOrders.mockResolvedValue(newOrders);
 
     render(<App />)
 
