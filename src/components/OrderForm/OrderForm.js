@@ -51,7 +51,7 @@ const OrderForm = ({getInfo}) => {
     });
 
     return (
-      <form>
+      <form data-testid="order-form-ele">
         <input
           type='text'
           placeholder='Name'

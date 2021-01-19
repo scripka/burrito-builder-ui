@@ -16,7 +16,7 @@ const Orders = ({ orders }) => {
   });
 
   return (
-    <section>
+    <section data-testid="orders-element">
       { orderEls.length ? orderEls : <p>No orders yet!</p> }
     </section>
   )

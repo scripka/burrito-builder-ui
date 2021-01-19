@@ -24,7 +24,7 @@ describe("OrderFomr", () => {
       getInfo={jest.fn()}
       />, { wrapper: MemoryRouter });
     
-      mockData.ingredients.map(ingredient => {
+      mockData[1].ingredients.map(ingredient => {
         expect(screen.getByRole("button", {name: ingredient})).toBeInTheDocument()
       })
   })
