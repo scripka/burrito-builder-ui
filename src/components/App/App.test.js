@@ -19,6 +19,7 @@ describe("App", () => {
     expect(screen.getByText("Burrito Builder")).toBeInTheDocument();
     expect(screen.getByTestId("orders-element")).toBeInTheDocument();
     expect(screen.getByTestId("order-form-ele")).toBeInTheDocument();
+    expect(screen.getByText("No orders yet!")).toBeInTheDocument();
   })
 
   it("should be able to display all existing orders", async() => {
@@ -30,7 +31,6 @@ describe("App", () => {
     await waitFor (() => expect(screen.getByText("tomato")).toBeInTheDocument());
     await waitFor (() => expect(screen.getByText("potatoes")).toBeInTheDocument());
     await waitFor (() => expect(screen.getByText("Pat")).toBeInTheDocument());
-
   })
 
   it("should be able to submit an order and display it", async() => {

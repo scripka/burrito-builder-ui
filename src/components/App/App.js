@@ -17,7 +17,7 @@ const App = () => {
       .catch((err) => setError(err.message));
   };
 
-  useEffect(() => getInfo(), [orders]);
+  useEffect(() => getInfo(), [orders.length]);
 
     return (
       <main className="App">
